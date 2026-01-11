@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+<h1 align="center">Pomodoro Timer Web</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+一個基於 React + TypeScript 的番茄鐘網頁
+</p>
 
-Currently, two official plugins are available:
+<div align="center">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Stars](https://img.shields.io/github/stars/NotKeKe/Pomodoro?style=social)
 
-## React Compiler
+[![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE) <br>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+## 項目簡介
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Pomodoro Timer Web** 是一個現代化、美觀且直覺的番茄鐘（Pomodoro）網頁應用。它旨在透過清爽的介面與流暢的交互，幫助使用者更專注於當前的任務。
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ 主要功能
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- 🕒 **計時器**：穩定的計時引擎，支持啟動、暫停與重置。
+- 🔄 **模式切換**：預設封裝了三種模式：
+  - **Pomodoro (25 min)**：核心專注時間。
+  - **Short Break (5 min)**：短暫休息。
+  - **Long Break (15 min)**：深度放鬆。
+- ➕ **手動微調**：提供快速加減時間按鈕，隨時根據需求調整專注長度。
+- 📝 **任務管理**：內建簡潔的任務列表，追蹤待辦事項。
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 快速開始
+
+### 1. 安裝依賴
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. 啟動開發伺服器
+```bash
+npm run dev
 ```
+
+### 3. 建置生產環境版本
+```bash
+npm run build
+```
+
+## 📸 介面展示 (Demo)
+<img src="docs/image.png" style="border-radius: 10px;"></img>
+<img src="docs/image-1.png" style="border-radius: 10px;"></img>
+
+---
+
+## 📜 授權條款
+
+本專案採用 [MIT](LICENSE) 授權。
